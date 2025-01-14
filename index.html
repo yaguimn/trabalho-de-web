@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Sistema de Estacionamento</h1>
+        <div id="login-section">
+            <h3>Login</h3>
+            <form id="login-form">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Usuário:</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha:</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+
+        <div id="admin-section" class="d-none">
+            <h3>Administração</h3>
+            <button class="btn btn-warning" id="change-tariff">Alterar Tarifa</button>
+        </div>
+
+        <div id="employee-section" class="d-none">
+            <h3>Funcionário</h3>
+            <button class="btn btn-success" id="add-ticket">Adicionar Ticket</button>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Data Entrada</th>
+                        <th>Data Saída</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="ticket-table"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
